@@ -5,3 +5,25 @@
 число, чем то, что загадано. Если за 10 попыток число не отгадано,
 то вывести загаданное число.
 """
+
+import random
+
+NUM = random.randint(0, 100)
+ATT = 3
+while ATT != 0:
+    USER_NUM = int(input(f'Осталось {ATT} попыток. Введите число от 0 до 100: '))
+    ATT -= 1
+    if ATT == 0:
+        print(f'Вы не угадали (: , загаданное число {NUM}')
+    if 100 > USER_NUM > 1:
+        print("Вы ввели неверное число, Введите число от 0 до 100")
+        continue
+    elif USER_NUM == NUM:
+        print(f'Вы угадали число! {NUM}')
+        break
+    elif USER_NUM > NUM:
+        print(f'Число больше загаданного!')
+    else:
+        print(f'Число меньше загаданного!')
+
+

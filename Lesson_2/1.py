@@ -9,3 +9,58 @@
 Также сообщать пользователю о невозможности деления на ноль,
 если он ввел 0 в качестве делителя.
 """
+
+
+while True:
+    ACTION = input("Введите операцию (+, -, *, / или 0 для выхода): ")
+    if ACTION == '0':
+        print("Досвидания ;)")
+        break
+    if ACTION in '+-*/':
+        b = int(input("Введите первое число: "))
+        NUMBER_2 = int(input("Введите второе число: "))
+        if ACTION == '+':
+            result = b + NUMBER_2
+            print(result)
+        if ACTION == '-':
+            result = b - NUMBER_2
+            print(result)
+        if ACTION == '*':
+            result = b * NUMBER_2
+            print(result)
+        if ACTION == '/':
+            if NUMBER_2 != 0:
+                result = b / NUMBER_2
+                print(result)
+            else:
+                print("Ошибка. Деление на ноль невозможно!")
+    else:
+        print("***Введите доступные операции (+, -, *, / или 0 для выхода)***")
+
+
+def action():
+    a = input("Введите операцию (+, -, *, / или 0 для выхода): ")
+    if a == '0':
+        print("Досвидания ;)")
+        return None
+    if a in '+-*/':
+        b = int(input("Введите первое число: "))
+        c = int(input("Введите второе число: "))
+
+        if a == '+':
+            print(b + c)
+        if a == '-':
+            print(b - c)
+        if a == '*':
+            print(b * c)
+        if a == '/':
+            if c != 0:
+                print(b / c)
+            else:
+                print("Ошибка. Деление на ноль невозможно!")
+    else:
+        print("***Введите доступные операции (+, -, *, / или 0 для выхода)***")
+    return action()
+
+
+action()

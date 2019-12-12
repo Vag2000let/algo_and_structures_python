@@ -3,3 +3,15 @@
  последовательности чисел. Количество вводимых чисел и цифра,
  которую необходимо посчитать, задаются вводом с клавиатуры.
 """
+
+HOW_MANY = int(input("Сколько чисел будем вводить?: "))
+SEARCH_NUMBER = int(input("Какое число будем искать?: "))
+SUM_NUMBERS = 0
+for i in range(HOW_MANY):
+    N = int(input(f'Введите число номер {i + 1}: '))
+    SUM_NUMBERS += str(N).count(str(SEARCH_NUMBER))
+
+print(f'В введенной последовательности чисел, число {SEARCH_NUMBER} встречается {SUM_NUMBERS} раз(а)')
+
+
+
